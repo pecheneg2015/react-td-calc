@@ -1,11 +1,11 @@
 import React from 'react';
 import {mount, ReactWrapper, shallow, ShallowWrapper } from 'enzyme';
 import Calculator from './index';
-import {Display} from './Display';
-import {Keypad} from './Keypad';
+import {Display} from './components/Display';
+import { Keypad } from './components/Keypad';
 
 describe('Calculator', () => {
-  let wrapper: ShallowWrapper<any, Readonly<{}>, React.Component<{}, {}, any>>
+  let wrapper: ShallowWrapper<any, Readonly<{}>, Calculator>
 
   beforeEach(() => wrapper = shallow(<Calculator />));
 
@@ -63,7 +63,7 @@ describe('mounted Calculator', () => {
 
 
 describe('updateDisplay', () => {
-  let wrapper: ShallowWrapper<any, Readonly<{}>, React.Component<{}, {}, any>>;
+  let wrapper: ShallowWrapper<any, Readonly<{}>,Calculator>;
 
   beforeEach(() => wrapper = shallow(<Calculator />));
 
@@ -112,7 +112,7 @@ describe('updateDisplay', () => {
 
 
 describe('setOperator', () => {
-  let wrapper: ShallowWrapper<any, Readonly<{}>, React.Component<{}, {}, any>>;
+  let wrapper: ShallowWrapper<any, Readonly<{}>, Calculator>;
 
   beforeEach(() => wrapper = shallow(<Calculator />));
 

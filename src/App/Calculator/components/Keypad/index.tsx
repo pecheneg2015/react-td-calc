@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import './Keypad.css';
-import {Key} from './Key';
+import {Key} from './components/Key';
 
 type KeypadProps = {
   callOperator:()=>void,

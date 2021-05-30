@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './Calculator.css';
-import {Display} from './Display';
-import {Keypad} from './Keypad';
+import {Display} from './components/Display';
+import {Keypad} from './components/Keypad';
 
 export class Calculator extends Component {
   state = {
@@ -29,7 +29,7 @@ export class Calculator extends Component {
     // performs selected operation
     switch (selectedOperator) {
       case '+':
-        displayValue = (storedValue + displayValue).toString();
+        displayValue = (+storedValue + +displayValue).toString();
         break;
       case '-':
         displayValue = (+storedValue - +displayValue).toString();

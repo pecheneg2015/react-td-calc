@@ -1,7 +1,7 @@
 import React from 'react';
-import { mount, shallow, ShallowWrapper } from 'enzyme';
+import { mount, ReactWrapper, shallow, ShallowWrapper } from 'enzyme';
 import {Keypad} from '.';
-import {Key} from './Key';
+import {Key} from './components/Key';
 
 describe('Keypad', () => {
   let wrapper: ShallowWrapper<any, Readonly<{}>, React.Component<{}, {}, any>>;
@@ -35,7 +35,7 @@ describe('Keypad', () => {
 });
 
 describe('mounted Keypad', () => {
-  let wrapper;
+  let wrapper: ReactWrapper<any, Readonly<{}>, React.Component<{}, {}, any>>;
 
   beforeEach(() => {
     wrapper = mount(
